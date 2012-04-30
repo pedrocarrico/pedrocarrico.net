@@ -23,10 +23,6 @@ text-align: center;
 }
 p {text-align: left;}
 
-
-
-
-
 #page
 {
   margin: 0 auto 0 auto; 
@@ -70,7 +66,6 @@ font-size:17px;
 font-weight:bold;
 font-family:Arial, Helvetica, sans-serif;
 }
-
 
 #bar
 {
@@ -119,7 +114,6 @@ margin-top:20px;
 margin-left:25px;
 margin-right:25px;
 margin-bottom:10px;
-background-image:url(../images/tab_back.png);
 background-repeat:no-repeat;
 
 }
@@ -176,3 +170,4 @@ padding-top:25px;
 
 img {border: none}
 
+img.github { position: absolute; top: 0; left: 0; border: 0; }
