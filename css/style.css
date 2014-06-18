@@ -237,7 +237,7 @@ a:hover {
   margin-bottom: 100px;
 }
 
-a.twitter, a.linkedin, a.github, a.aboutme, a.tumblr {
+a.twitter, a.linkedin, a.github, a.aboutme, a.tumblr, a.lanyrd {
   display: inline-block;
   height: 32px;
   width: 32px;
@@ -257,6 +257,9 @@ a.aboutme:hover { background-image: url("../img/aboutme_icon_32.png"); }
 
 a.tumblr { background-image: url("../img/tumblr_icon_32_bw.png"); }
 a.tumblr:hover { background-image: url("../img/tumblr_icon_32.png"); }
+
+a.lanyrd { background-image: url("../img/lanyrd_icon_32_bw.png"); }
+a.lanyrd:hover { background-image: url("../img/lanyrd_icon_32.png"); }
 
 .acknowledgment { font-size: 9px; }
 
