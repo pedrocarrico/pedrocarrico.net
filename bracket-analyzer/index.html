@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Last's MTG Commander Bracket Analyzer</title>
+  <meta name="description" content="The most advanced, AI-powered, tournament-grade EDH commander bracket analyzer on the internet. Probably.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+  <div class="mana-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="brand">
+      <img class="brand-mark" src="last.png" alt="Last's logo" width="64" height="64">
+      <div class="brand-text">
+        <h1>℄ᾀຮȶ's MTG Commander Bracket Analyzer</h1>
+        <p class="tagline">Tournament-grade deck power estimation. Powered by advanced heuristics™.</p>
+      </div>x
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="badges">
+        <span class="badge">🧠 AI-Enhanced</span>
+        <span class="badge">⚡ Real-Time</span>
+        <span class="badge">📊 Bracket 1–5</span>
+        <span class="badge">🏆 Rules Committee Approved*</span>
+      </div>
+      <p class="lead">
+        Paste your full decklist or drop a Moxfield URL below. Our proprietary engine
+        cross-references over <strong>28,000 cards</strong>, salt scores, fast mana density,
+        and combo lines to deliver your official Commander bracket.
+      </p>
+    </section>
+
+    <section class="analyzer card">
+      <form id="analyzer-form" novalidate>
+        <div class="tabs" role="tablist">
+          <button type="button" class="tab active" data-tab="decklist" role="tab">📝 Decklist</button>
+          <button type="button" class="tab" data-tab="moxfield" role="tab">🔗 Moxfield URL</button>
+        </div>
+
+        <div class="tab-panel active" data-panel="decklist">
+          <label for="decklist">Paste your decklist</label>
+          <textarea id="decklist" name="decklist" rows="10"
+            placeholder="1 Sol Ring&#10;1 Command Tower&#10;1 Cyclonic Rift&#10;1 Rhystic Study&#10;..."></textarea>
+        </div>
+
+        <div class="tab-panel" data-panel="moxfield" hidden>
+          <label for="moxfield">Moxfield deck URL</label>
+          <input type="url" id="moxfield" name="moxfield"
+            placeholder="https://www.moxfield.com/decks/xXxXxXxXxXxXxX">
+          <p class="hint">We support Moxfield, Archidekt, and vibes.</p>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submit-btn">
+          Analyze My Bracket
+        </button>
+        <p class="disclaimer">*Not actually approved by anyone. This is a parody.</p>
+      </form>
+    </section>
+
+    <section class="result" id="result" hidden aria-live="polite">
+      <div class="analyzing" id="analyzing">
+        <div class="spinner"></div>
+        <p class="analyzing-text" id="analyzing-text">Initializing engine…</p>
+        <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+      </div>
+
+      <div class="verdict" id="verdict" hidden>
+        <div class="verdict-crest">💩</div>
+        <h2 class="verdict-text">Que belo cagalhon!</h2>
+        <p class="verdict-sub">Analysis complete. This is our final and only assessment.</p>
+        <button type="button" class="reset-btn" id="reset-btn">Analyze another deck</button>
+      </div>
+    </section>
+  </main>
+
+  <section class="discord-cta">
+    <a class="discord-btn" href="https://discord.gg/gSamXrQ4" target="_blank" rel="noopener">
+      <span class="discord-icon">🎲</span>
+      Please join us at <strong>EDH Portugal</strong> Discord for more crazy stuff!
+    </a>
+  </section>
+
+  <footer class="site-footer">
+    <p>Last's MTG Commander Bracket Analyzer — a parody. Not affiliated with Wizards of the Coast, Moxfield, or good taste.</p>
+  </footer>
+
+  <script src="js/analyzer.js"></script>
+</body>
+</html>
